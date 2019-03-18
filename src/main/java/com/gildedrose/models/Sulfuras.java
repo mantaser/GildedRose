@@ -12,13 +12,13 @@ public class Sulfuras extends BasicItem {
 
     private int quality;
 
-
-
     public Sulfuras(String name, int sellIn, int quality) {
         super(name, sellIn, quality);
     }
 
     public void updateQuality(){
-        this.quality = 80;
+        System.out.println("Sulfuras class");
     }
+
+
 }
