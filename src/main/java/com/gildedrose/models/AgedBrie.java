@@ -3,6 +3,8 @@ package com.gildedrose.models;
 import com.gildedrose.BasicItem;
 
 public class AgedBrie extends BasicItem {
+    private static final int maxQuality = 50;
+
     private String name;
 
     private int sellIn;

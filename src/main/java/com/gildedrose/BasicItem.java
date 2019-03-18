@@ -2,11 +2,13 @@ package com.gildedrose;
 
 public class BasicItem implements Item{
 
-    private String name;
+    private static final int minQuality = 0;
 
-    private int sellIn;
+    public String name;
 
-    private int quality;
+    public int sellIn;
+
+    public int quality;
 
     public BasicItem(String name, int sellIn, int quality) {
         this.name = name;
@@ -15,7 +17,14 @@ public class BasicItem implements Item{
     }
 
     public void updateQuality(){
-        // logic
+        this.sellIn -=1;
+        if(sellIn > -1 && this.quality > minQuality){
+            this.quality -=1;
+        } else if (sellIn < 0 && this.quality > 1){
+            this.quality -=2;
+        } else {
+            this.quality = minQuality;
+        }
     }
 
     public String getName() {
@@ -28,18 +37,6 @@ public class BasicItem implements Item{
 
     public int getQuality() {
         return quality;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setSellIn(int sellIn) {
-        this.sellIn = sellIn;
-    }
-
-    public void setQuality(int quality) {
-        this.quality = quality;
     }
 
     @Override
