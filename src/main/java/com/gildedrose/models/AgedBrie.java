@@ -6,7 +6,7 @@ public class AgedBrie extends BasicItem {
     private static final int maxQuality = 50;
     private static final int minQuality = 0;
 
-    
+
 
     public AgedBrie(String name, int sellIn, int quality) {
         super(name, sellIn, quality);

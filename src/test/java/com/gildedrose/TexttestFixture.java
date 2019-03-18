@@ -1,9 +1,6 @@
 package com.gildedrose;
 
-import com.gildedrose.models.AgedBrie;
-import com.gildedrose.models.DexterityVest;
-import com.gildedrose.models.ElixirMongoose;
-import com.gildedrose.models.Sulfuras;
+import com.gildedrose.models.*;
 
 public class TexttestFixture {
     public static void main(String[] args) {
@@ -12,15 +9,15 @@ public class TexttestFixture {
         BasicItem[] items = new BasicItem[] {
 //                new BasicItem("+5 Dexterity Vest", 10, 20), //
 //                new DexterityVest("+5 Dexterity Vest", 10, 20), //
-                new BasicItem("Aged Brie", 4, 1), //
-                new AgedBrie("Aged Brie", 4, 1), //
+//                new BasicItem("Aged Brie", 4, 1), //
+//                new AgedBrie("Aged Brie", 4, 1), //
 //                new BasicItem("Elixir of the Mongoose", 5, 7), //
 //                new ElixirMongoose("Elixir of the Mongoose", 5, 7), //
 //                new BasicItem("Sulfuras, Hand of Ragnaros", 0, 80), //
 //                new Sulfuras("Sulfuras, Hand of Ragnaros", -1, 80), //
-//                new BasicItem("Backstage passes to a TAFKAL80ETC concert", 15, 20),
-//                new BasicItem("Backstage passes to a TAFKAL80ETC concert", 10, 49),
-//                new BasicItem("Backstage passes to a TAFKAL80ETC concert", 5, 49),
+                new BackstagePasses("Backstage passes to a TAFKAL80ETC concert", 15, 20),
+                new BackstagePasses("Backstage passes to a TAFKAL80ETC concert", 10, 49),
+                new BackstagePasses("Backstage passes to a TAFKAL80ETC concert", 5, 49),
 //                // this conjured item does not work properly yet
 //                new BasicItem("Conjured Mana Cake", 3, 6)
                 };
