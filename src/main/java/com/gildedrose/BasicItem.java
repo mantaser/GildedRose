@@ -18,9 +18,9 @@ public class BasicItem implements Item{
 
     public void updateQuality(){
         this.sellIn -= 1;
-        if(sellIn > -1 && this.quality > minQuality){
-            this.quality -=1;
-        } else if (sellIn < 0 && this.quality > 1){
+        if(this.sellIn > -1 && this.quality > minQuality){
+            this.quality--;
+        } else if (this.sellIn < 0 && this.quality > 1){
             this.quality -=2;
         } else {
             this.quality = minQuality;
