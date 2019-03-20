@@ -1,7 +1,7 @@
 package com.gildedrose.models;
 
-import com.gildedrose.BasicItem;
 
+import com.gildedrose.entities.BasicItem;
 
 public class Sulfuras extends BasicItem {
 

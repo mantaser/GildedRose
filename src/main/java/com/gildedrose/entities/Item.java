@@ -1,4 +1,4 @@
-package com.gildedrose;
+package com.gildedrose.entities;
 
 public interface Item {
     void updateQuality();

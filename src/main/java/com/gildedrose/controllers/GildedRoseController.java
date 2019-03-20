@@ -1,5 +1,8 @@
-package com.gildedrose;
+package com.gildedrose.controllers;
 
+import com.gildedrose.entities.BasicItem;
+
+import com.gildedrose.GildedRose;
 import com.gildedrose.models.*;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

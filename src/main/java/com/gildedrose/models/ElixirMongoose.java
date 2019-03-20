@@ -1,6 +1,6 @@
 package com.gildedrose.models;
 
-import com.gildedrose.BasicItem;
+import com.gildedrose.entities.BasicItem;
 
 public class ElixirMongoose extends BasicItem {
     private String name;

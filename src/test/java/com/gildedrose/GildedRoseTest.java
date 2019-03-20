@@ -3,6 +3,7 @@ package com.gildedrose;
 import static org.junit.Assert.*;
 
 import com.gildedrose.models.AgedBrie;
+import com.gildedrose.entities.BasicItem;
 import org.junit.Test;
 
 public class GildedRoseTest {

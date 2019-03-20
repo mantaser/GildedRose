@@ -1,8 +1,10 @@
 package com.gildedrose;
 
+import com.gildedrose.entities.BasicItem;
+
 import java.util.ArrayList;
 
-class GildedRose {
+public class GildedRose {
     private ArrayList<BasicItem> items;
 
     public GildedRose(ArrayList<BasicItem> items) {

@@ -1,8 +1,12 @@
-package com.gildedrose;
+package com.gildedrose.entities;
 
-public class BasicItem implements Item{
+import org.springframework.data.annotation.Id;
 
+public class BasicItem implements Item {
     private static final int minQuality = 0;
+
+    @Id
+    public String id;
 
     public String name;
 
@@ -41,6 +45,10 @@ public class BasicItem implements Item{
 
     @Override
    public String toString() {
-        return this.name + ", " + this.sellIn + ", " + this.quality;
+        return String.format(
+                "Item[id=%s, name='%s', sellIn='%s', quality='%s']",
+                id, name, sellIn, quality);
     }
+
+
 }

@@ -1,5 +1,6 @@
 package com.gildedrose;
 
+import com.gildedrose.entities.BasicItem;
 import com.gildedrose.models.*;
 
 import java.util.ArrayList;
