@@ -1,7 +1,6 @@
 package com.gildedrose;
 
-import com.gildedrose.entities.BasicItem;
-import com.gildedrose.models.*;
+import com.gildedrose.entities.*;
 
 import java.util.ArrayList;
 
@@ -9,7 +8,7 @@ public class TexttestFixture {
     public static void main(String[] args) {
         System.out.println("OMGHAI!");
 
-        ArrayList<BasicItem> items = new ArrayList<>();
+        ArrayList<Item> items = new ArrayList<>();
             items.add(new DexterityVest("+5 Dexterity Vest", 10, 20));
             items.add(new AgedBrie("Aged Brie", 4, 1));
             items.add(new ElixirMongoose("Elixir of the Mongoose", 5, 7));
@@ -33,7 +32,7 @@ public class TexttestFixture {
         for (int i = 0; i < days; i++) {
             System.out.println("-------- day " + i + " --------");
             System.out.println("name, sellIn, quality");
-            for (BasicItem item : items) {
+            for (Item item : items) {
                 System.out.println(item);
 
             }

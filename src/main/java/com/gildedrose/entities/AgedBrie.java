@@ -1,12 +1,7 @@
-package com.gildedrose.models;
+package com.gildedrose.entities;
 
-import com.gildedrose.entities.BasicItem;
-import org.springframework.data.annotation.TypeAlias;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document(collection="basicItem")
-@TypeAlias("item")
-public class AgedBrie extends BasicItem {
+//@Document(collection="basicItem")
+public class AgedBrie extends Item {
     private static final int maxQuality = 50;
 
     public AgedBrie(String name, int sellIn, int quality) {
@@ -24,5 +19,10 @@ public class AgedBrie extends BasicItem {
                 super.quality = maxQuality;
             }
         }
+    }
+
+    @Override
+    public void outputSample() {
+        System.out.println("Output from Aged Brie class.");
     }
 }

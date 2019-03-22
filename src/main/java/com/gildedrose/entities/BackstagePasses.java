@@ -1,12 +1,7 @@
-package com.gildedrose.models;
+package com.gildedrose.entities;
 
-import com.gildedrose.entities.BasicItem;
-import org.springframework.data.annotation.TypeAlias;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document(collection="basicItem")
-@TypeAlias("item")
-public class BackstagePasses extends BasicItem {
+//@Document(collection="basicItem")
+public class BackstagePasses extends Item {
     private static final int maxQuality = 50;
 
     public BackstagePasses(String name, int sellIn, int quality) {

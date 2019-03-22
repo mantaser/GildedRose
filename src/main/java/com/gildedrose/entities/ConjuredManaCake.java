@@ -1,19 +1,8 @@
-package com.gildedrose.models;
+package com.gildedrose.entities;
 
-import com.gildedrose.entities.BasicItem;
-import org.springframework.data.annotation.TypeAlias;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document(collection="basicItem")
-@TypeAlias("item")
-public class ConjuredManaCake extends BasicItem {
+//@Document(collection="basicItem")
+public class ConjuredManaCake extends Item {
     private static final int minQuality = 0;
-
-    private String name;
-
-    private int sellIn;
-
-    private int quality;
 
     public ConjuredManaCake(String name, int sellIn, int quality) {
         super(name, sellIn, quality);

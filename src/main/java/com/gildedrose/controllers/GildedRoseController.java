@@ -1,10 +1,9 @@
 package com.gildedrose.controllers;
 
-import com.gildedrose.entities.BasicItem;
+import com.gildedrose.entities.Item;
 
 import com.gildedrose.GildedRose;
-import com.gildedrose.repositories.BasicItemRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.gildedrose.repositories.ItemRepository;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,15 +13,15 @@ import java.util.ArrayList;
 @RestController
 public class GildedRoseController {
 
-    private final BasicItemRepository repository;
+    private final ItemRepository repository;
 
-    public GildedRoseController(BasicItemRepository repository) {
+    public GildedRoseController(ItemRepository repository) {
         this.repository = repository;
     }
 
     @RequestMapping("/items")
     public GildedRose gildedRose() {
-        ArrayList<BasicItem> items = new ArrayList<>(repository.findAll());
+        ArrayList<Item> items = new ArrayList<>(repository.findAll());
 //        items.add(new DexterityVest("+5 Dexterity Vest", 10, 20));
 //        items.add(new AgedBrie("Aged Brie", 4, 1));
 //        items.add(new ElixirMongoose("Elixir of the Mongoose", 5, 7));
