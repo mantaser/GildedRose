@@ -6,13 +6,13 @@ public class BasicItem implements Item {
     private static final int minQuality = 0;
 
     @Id
-    public String id;
+    protected String id;
 
-    public String name;
+    protected String name;
 
-    public int sellIn;
+    protected int sellIn;
 
-    public int quality;
+    protected int quality;
 
     public BasicItem(String name, int sellIn, int quality) {
         this.name = name;

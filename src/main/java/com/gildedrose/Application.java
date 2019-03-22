@@ -11,8 +11,12 @@ package com.gildedrose;
 @SpringBootApplication
 public class Application implements CommandLineRunner {
 
+    private final BasicItemRepository repository;
+
     @Autowired
-    private BasicItemRepository repository;
+    public Application(BasicItemRepository repository) {
+        this.repository = repository;
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
@@ -21,10 +25,10 @@ public class Application implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 //        repository.deleteAll();
-
+//
         //save a couple of basicItems
 //        repository.save(new BasicItem("+5 Dexterity Vest", 10, 20));
-//        repository.save(new BasicItem("Aged Brie", 4, 1));
+        repository.save(new AgedBrie("Aged Brie", 4, 1));
 //        repository.save(new BasicItem("Elixir of the Mongoose", 5, 7));
 //        repository.save(new BasicItem("Sulfuras, Hand of Ragnaros", 0, 80));
 //        repository.save(new BasicItem("Backstage passes to a TAFKAL80ETC concert", 15, 20));
@@ -47,7 +51,7 @@ public class Application implements CommandLineRunner {
         // fetch an individual item
         System.out.println("BasicItems found with findByName('Aged Brie')");
         System.out.println("-------------------------------");
-        System.out.println(repository.findByName("Aged Brie"));
+        System.out.println(repository.findByName("Elixir of the Mongoose"));
         System.out.println();
 
 

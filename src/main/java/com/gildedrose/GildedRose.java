@@ -17,6 +17,10 @@ public class GildedRose {
         }
     }
 
+    public void addItem(BasicItem item) {
+        this.items.add(item);
+    }
+
     public ArrayList<BasicItem> getItems() {
         return items;
     }
