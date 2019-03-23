@@ -27,6 +27,7 @@ public class BackstagePassesTestParameterized {
     public static Collection<Object[]> testConditions() {
         return Arrays.asList(new Object[] [] {
                 {20,5,19,6},
+                {11,49,10,50},
                 {11,6,10,8},
                 {10,5,9,7},
                 {6,7,5,10},
