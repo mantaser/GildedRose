@@ -26,10 +26,10 @@ public class SulfurasTestParameterized {
     @Parameterized.Parameters
     public static Collection<Object[]> testConditions() {
         return Arrays.asList(new Object[] [] {
-                {10,80,9,80},
-                {1,80,0,80},
-                {0,80,-1,80},
-                {-2,80,-3,80},
+                {10,80,10,80},
+                {1,80,1,80},
+                {-1,80,-1,80},
+                {-2,80,-2,80},
         });
     }
 
