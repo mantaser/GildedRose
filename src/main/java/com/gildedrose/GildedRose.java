@@ -1,44 +1,39 @@
 package com.gildedrose;
 
 import com.gildedrose.entities.*;
+import com.gildedrose.repositories.ItemRepository;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 
+import static javax.management.timer.Timer.ONE_DAY;
+
+
+@Component
 public class GildedRose {
-    private ArrayList<Item> items;
 
+    private final ItemRepository repository;
 
-
-    public GildedRose(ArrayList<Item> items) {
-        this.items = items;
+    public GildedRose(ItemRepository repository) {
+        this.repository = repository;
     }
 
-    public void updateQuality() {
+    @Scheduled(fixedRate = ONE_DAY)
+    public void updateItemsQuality() {
+        ArrayList<Item> items = new ArrayList<>(repository.findAll());
         for (Item item : items) {
             item.updateQuality();
+            repository.save(item);
         }
-    }
-
-    public void addStartingItem(){
-        items.add(new DexterityVest( 10, 20));
-        items.add(new AgedBrie(4, 1));
-        items.add(new ElixirMongoose(5, 7));
-        items.add(new Sulfuras( 0, 80));
-        items.add(new BackstagePasses( 15, 20));
-        items.add(new BackstagePasses(10, 49));
-        items.add(new BackstagePasses( 5, 49));
-        // this conjured item does not work properly yet
-        items.add(new ConjuredManaCake(3, 6));
-        items.add(new ConjuredManaCake(5, 50));
-        items.add(new ConjuredManaCake(7, 25));
-
+        System.out.println("GildedRose.updateQuality() executed");
     }
 
     public void addItem(Item item) {
-        this.items.add(item);
+        this.repository.save(item);
     }
 
     public ArrayList<Item> getItems() {
-        return items;
+        return new ArrayList<>(repository.findAll());
     }
 }

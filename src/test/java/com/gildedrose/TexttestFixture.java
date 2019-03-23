@@ -1,12 +1,13 @@
 package com.gildedrose;
 
 import com.gildedrose.entities.*;
+import com.gildedrose.repositories.ItemRepository;
 
 import java.util.ArrayList;
 
 public class TexttestFixture {
+
     public static void main(String[] args) {
-        System.out.println("OMGHAI!");
 
         ArrayList<Item> items = new ArrayList<>();
 //            items.add(new DexterityVest(10, 20));
@@ -22,9 +23,9 @@ public class TexttestFixture {
 //            items.add( new ConjuredManaCake(7, 25));
 
 
-        GildedRose app = new GildedRose(items);
+        //GildedRose app = new GildedRose(repository);
 
-        int days = 30;
+        int days = 5;
         if (args.length > 0) {
             days = Integer.parseInt(args[0]) + 1;
         }
@@ -36,11 +37,12 @@ public class TexttestFixture {
                 System.out.println(item);
 
             }
-            app.updateQuality();
+      //      app.updateQuality();
             System.out.println();
 
 //            app.updateQuality();
         }
     }
+
 
 }
