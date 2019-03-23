@@ -12,13 +12,13 @@ import static junit.framework.TestCase.assertEquals;
 
 
 @RunWith(Parameterized.class)
-public class AgedBrieParameterized {
+public class AgedBrieTestParameterized {
 
     private AgedBrie agedBrie;
     private int expectedSellIn;
     private int expectedQuality;
 
-    public AgedBrieParameterized(int sellIn, int quality, int expectedSellIn, int expectedQuality) {
+    public AgedBrieTestParameterized(int sellIn, int quality, int expectedSellIn, int expectedQuality) {
         this.agedBrie = new AgedBrie(sellIn,quality);
         this.expectedSellIn = expectedSellIn;
         this.expectedQuality = expectedQuality;
