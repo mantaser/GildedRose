@@ -36,13 +36,13 @@ public class ConjuredManaCakeTestParameterized {
     }
 
     @Test
-    public void updateQuality_sellIn() {
+    public void updateQualitySellIn() {
         this.conjuredManaCake.updateQuality();
         assertEquals(expectedSellIn, this.conjuredManaCake.getSellIn(), 0);
     }
 
     @Test
-    public void updateQuality_quality() {
+    public void updateQualityQuality() {
         this.conjuredManaCake.updateQuality();
         assertEquals(expectedQuality, this.conjuredManaCake.getQuality(), 0);
     }

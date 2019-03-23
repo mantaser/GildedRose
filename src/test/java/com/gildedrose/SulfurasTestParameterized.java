@@ -34,13 +34,13 @@ public class SulfurasTestParameterized {
     }
 
     @Test
-    public void updateQuality_sellIn() {
+    public void updateQualitySellIn() {
         this.sulfuras.updateQuality();
         assertEquals(expectedSellIn, this.sulfuras.getSellIn(), 0);
     }
 
     @Test
-    public void updateQuality_quality() {
+    public void updateQualityQuality() {
         this.sulfuras.updateQuality();
         assertEquals(expectedQuality, this.sulfuras.getQuality(), 0);
     }

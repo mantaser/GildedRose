@@ -25,7 +25,7 @@ public class Application implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
 
-       repository.deleteAll();
+//       repository.deleteAll();
 
 //        save a couple of basicItems
 //        repository.save(new DexterityVest( 10, 20));

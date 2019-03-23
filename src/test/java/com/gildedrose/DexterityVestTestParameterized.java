@@ -36,13 +36,13 @@ public class DexterityVestTestParameterized {
     }
 
     @Test
-    public void updateQuality_sellIn() {
+    public void updateQualitySellIn() {
         this.dexterityVest.updateQuality();
         assertEquals(expectedSellIn, this.dexterityVest.getSellIn(), 0);
     }
 
     @Test
-    public void updateQuality_quality() {
+    public void updateQualityQuality() {
         this.dexterityVest.updateQuality();
         assertEquals(expectedQuality, this.dexterityVest.getQuality(), 0);
     }

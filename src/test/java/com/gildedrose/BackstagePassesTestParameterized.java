@@ -40,13 +40,13 @@ public class BackstagePassesTestParameterized {
     }
 
     @Test
-    public void updateQuality_sellIn() {
+    public void updateQualitySellIn() {
         this.backstagePasses.updateQuality();
         assertEquals(expectedSellIn, this.backstagePasses.getSellIn(), 0);
     }
 
     @Test
-    public void updateQuality_quality() {
+    public void updateQualityQuality() {
         this.backstagePasses.updateQuality();
         assertEquals(expectedQuality, this.backstagePasses.getQuality(), 0);
     }

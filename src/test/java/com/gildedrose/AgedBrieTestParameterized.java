@@ -37,13 +37,13 @@ public class AgedBrieTestParameterized {
     }
 
     @Test
-    public void updateQuality_sellIn() {
+    public void updateQualitySellIn() {
         this.agedBrie.updateQuality();
         assertEquals(expectedSellIn, this.agedBrie.getSellIn(), 0);
     }
 
     @Test
-    public void updateQuality_quality() {
+    public void updateQualityQuality() {
         this.agedBrie.updateQuality();
         assertEquals(expectedQuality, this.agedBrie.getQuality(), 0);
     }

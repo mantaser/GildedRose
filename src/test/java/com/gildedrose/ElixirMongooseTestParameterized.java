@@ -36,13 +36,13 @@ public class ElixirMongooseTestParameterized {
     }
 
     @Test
-    public void updateQuality_sellIn() {
+    public void updateQualitySellIn() {
         this.elixirMongoose.updateQuality();
         assertEquals(expectedSellIn, this.elixirMongoose.getSellIn(), 0);
     }
 
     @Test
-    public void updateQuality_quality() {
+    public void updateQualityQuality() {
         this.elixirMongoose.updateQuality();
         assertEquals(expectedQuality, this.elixirMongoose.getQuality(), 0);
     }
