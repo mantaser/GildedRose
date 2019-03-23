@@ -4,8 +4,8 @@ package com.gildedrose.entities;
 public class ConjuredManaCake extends Item {
     private static final int minQuality = 0;
 
-    public ConjuredManaCake(String name, int sellIn, int quality) {
-        super(name, sellIn, quality);
+    public ConjuredManaCake(int sellIn, int quality) {
+        super("Conjured Mana Cake", sellIn, quality);
     }
 
     @Override

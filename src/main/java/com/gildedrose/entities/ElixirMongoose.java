@@ -4,7 +4,7 @@ package com.gildedrose.entities;
 
 public class ElixirMongoose extends Item {
 
-    public ElixirMongoose(String name, int sellIn, int quality) {
-        super(name, sellIn, quality);
+    public ElixirMongoose(int sellIn, int quality) {
+        super("Elixir of the Mongoose", sellIn, quality);
     }
 }

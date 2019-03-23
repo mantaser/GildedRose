@@ -25,20 +25,20 @@ public class Application implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
 
-//       repository.deleteAll();
+       repository.deleteAll();
 
 //        save a couple of basicItems
-//        repository.save(new DexterityVest("+5 Dexterity Vest", 10, 20));
-//        repository.save(new AgedBrie("Aged Brie", 4, 1));
-//        repository.save(new ElixirMongoose("Elixir of the Mongoose", 5, 7));
-//        repository.save(new Sulfuras("Sulfuras, Hand of Ragnaros", 0, 80));
-//        repository.save(new BackstagePasses("Backstage passes to a TAFKAL80ETC concert", 15, 20));
-//        repository.save(new BackstagePasses("Backstage passes to a TAFKAL80ETC concert", 10, 49));
-//        repository.save(new BackstagePasses("Backstage passes to a TAFKAL80ETC concert", 5, 49));
+//        repository.save(new DexterityVest( 10, 20));
+//        repository.save(new AgedBrie( 4, 1));
+//        repository.save(new ElixirMongoose( 5, 7));
+//        repository.save(new Sulfuras( 0, 80));
+//        repository.save(new BackstagePasses( 15, 20));
+//        repository.save(new BackstagePasses( 10, 49));
+//        repository.save(new BackstagePasses( 5, 49));
 //        // this conjured item does not work properly yet
-//        repository.save(new ConjuredManaCake("Conjured Mana Cake", 3, 6));
-//        repository.save(new ConjuredManaCake("Conjured Mana Cake", 5, 50));
-//        repository.save(new ConjuredManaCake("Conjured Mana Cake", 7, 25));
+//        repository.save(new ConjuredManaCake( 3, 6));
+//        repository.save(new ConjuredManaCake( 5, 50));
+//        repository.save(new ConjuredManaCake(7, 25));
 
         //fetch all basicItems
         System.out.println("BasicItems found with findAll()");
@@ -48,9 +48,6 @@ public class Application implements CommandLineRunner {
             System.out.println(item);
             item.outputSample();
         }
-
-
-
 
     }
 }
