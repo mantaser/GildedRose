@@ -2,10 +2,14 @@ package com.gildedrose;
 
 import com.gildedrose.entities.*;
 import com.gildedrose.repositories.ItemRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 
 public class TexttestFixture {
+
+    @Autowired
+    private ItemRepository repository;
 
     public static void main(String[] args) {
 
@@ -22,10 +26,9 @@ public class TexttestFixture {
 //            items.add(new ConjuredManaCake( 5, 50));
 //            items.add( new ConjuredManaCake(7, 25));
 
-
         //GildedRose app = new GildedRose(repository);
 
-        int days = 5;
+        int days = 0;
         if (args.length > 0) {
             days = Integer.parseInt(args[0]) + 1;
         }

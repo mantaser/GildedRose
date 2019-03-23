@@ -1,6 +1,5 @@
 package com.gildedrose.controllers;
 
-import com.gildedrose.GildedRose;
 import com.gildedrose.entities.Item;
 import com.gildedrose.repositories.ItemRepository;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-
 
 @RestController
 public class GildedRoseController {

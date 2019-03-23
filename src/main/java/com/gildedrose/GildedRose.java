@@ -26,7 +26,6 @@ public class GildedRose {
             item.updateQuality();
             repository.save(item);
         }
-        System.out.println("GildedRose.updateQuality() executed");
     }
 
     public void addItem(Item item) {
