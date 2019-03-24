@@ -10,6 +10,6 @@ Resource for starter files: https://github.com/emilybache/GildedRose-Refactoring
 4. Implemented scheduler to update items with method updateQuality() once a day.
 5. Code is covered with jUnit parameterized tests.
 
-
 ## Sample items in database after updateQuality() method.
+
 ![Default state](images/sampleDatabase.png?raw=true "sampleDatabase")
