@@ -1,15 +1,10 @@
 package com.gildedrose;
 
 import com.gildedrose.entities.*;
-import com.gildedrose.repositories.ItemRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 
 public class TexttestFixture {
-
-    @Autowired
-    private ItemRepository repository;
 
     public static void main(String[] args) {
 

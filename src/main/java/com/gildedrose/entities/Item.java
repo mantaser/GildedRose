@@ -1,6 +1,7 @@
 package com.gildedrose.entities;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.scheduling.annotation.Async;
 
 public abstract class Item{
     private static final int minQuality = 0;
@@ -20,6 +21,7 @@ public abstract class Item{
         this.quality = quality;
     }
 
+    @Async
     public void updateQuality(){
         this.sellIn -= 1;
         if(this.sellIn > -1 && this.quality > minQuality){

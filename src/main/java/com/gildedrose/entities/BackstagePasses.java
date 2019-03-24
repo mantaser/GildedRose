@@ -1,5 +1,7 @@
 package com.gildedrose.entities;
 
+import org.springframework.scheduling.annotation.Async;
+
 //@Document(collection="basicItem")
 public class BackstagePasses extends Item {
     private static final int maxQuality = 50;
@@ -8,6 +10,7 @@ public class BackstagePasses extends Item {
         super("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
     }
 
+    @Async
     @Override
     public void updateQuality() {
         super.sellIn--;

@@ -1,5 +1,7 @@
 package com.gildedrose.entities;
 
+import org.springframework.scheduling.annotation.Async;
+
 //@Document(collection="basicItem")
 public class ConjuredManaCake extends Item {
     private static final int minQuality = 0;
@@ -8,6 +10,7 @@ public class ConjuredManaCake extends Item {
         super("Conjured Mana Cake", sellIn, quality);
     }
 
+    @Async
     @Override
     public void updateQuality() {
         super.sellIn -= 1;

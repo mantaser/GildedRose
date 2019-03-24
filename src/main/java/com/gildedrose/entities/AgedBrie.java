@@ -1,5 +1,7 @@
 package com.gildedrose.entities;
 
+import org.springframework.scheduling.annotation.Async;
+
 //@Document(collection="basicItem")
 public class AgedBrie extends Item {
     private static final int maxQuality = 50;
@@ -8,6 +10,7 @@ public class AgedBrie extends Item {
         super("Aged Brie", sellIn, quality);
     }
 
+    @Async
     @Override
     public void updateQuality() {
         super.sellIn--;
