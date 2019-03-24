@@ -14,10 +14,10 @@ public class ConjuredManaCake extends Item {
     @Override
     public void updateQuality() {
         super.sellIn -= 1;
-        if(super.sellIn > -1 && super.quality > minQuality){
-            super.quality -=2;
-        } else if (super.sellIn < 0 && super.quality > 1){
-            super.quality -=4;
+        if (super.sellIn > -1 && super.quality > minQuality) {
+            super.quality -= 2;
+        } else if (super.sellIn < 0 && super.quality > 1) {
+            super.quality -= 4;
         } else {
             super.quality = minQuality;
         }

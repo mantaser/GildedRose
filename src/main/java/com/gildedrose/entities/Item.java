@@ -3,7 +3,7 @@ package com.gildedrose.entities;
 import org.springframework.data.annotation.Id;
 import org.springframework.scheduling.annotation.Async;
 
-public abstract class Item{
+public abstract class Item {
     private static final int minQuality = 0;
 
     @Id
@@ -22,19 +22,15 @@ public abstract class Item{
     }
 
     @Async
-    public void updateQuality(){
+    public void updateQuality() {
         this.sellIn -= 1;
-        if(this.sellIn > -1 && this.quality > minQuality){
+        if (this.sellIn > -1 && this.quality > minQuality) {
             this.quality--;
-        } else if (this.sellIn < 0 && this.quality > 1){
-            this.quality -=2;
+        } else if (this.sellIn < 0 && this.quality > 1) {
+            this.quality -= 2;
         } else {
             this.quality = minQuality;
         }
-    }
-
-    public void outputSample(){
-        System.out.println("Output from Item class.");
     }
 
     public String getId() {
@@ -54,7 +50,7 @@ public abstract class Item{
     }
 
     @Override
-   public String toString() {
+    public String toString() {
         return String.format(
                 "Item[id=%s, name='%s', sellIn='%s', quality='%s']",
                 id, name, sellIn, quality);

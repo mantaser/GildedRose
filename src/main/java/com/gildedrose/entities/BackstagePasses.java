@@ -2,7 +2,6 @@ package com.gildedrose.entities;
 
 import org.springframework.scheduling.annotation.Async;
 
-//@Document(collection="basicItem")
 public class BackstagePasses extends Item {
     private static final int maxQuality = 50;
 
